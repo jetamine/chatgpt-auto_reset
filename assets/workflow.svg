@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="610" viewBox="0 0 1240 610" role="img" aria-labelledby="title desc">
+  <title id="title">ChatGPT Auto Hello workflow</title>
+  <desc id="desc">Every five hours, Windows Task Scheduler starts a dedicated Chrome profile, opens an existing ChatGPT conversation, locates its composer, and sends the configured message once. Failures are logged with a screenshot.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#31463b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="soft-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#748d81" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      text { font-family: 'Segoe UI', Arial, sans-serif; letter-spacing: 0; }
+      .heading { fill: #182c25; font-size: 35px; font-weight: 760; }
+      .subheading { fill: #52675c; font-size: 16px; }
+      .eyebrow { fill: #426454; font-size: 12px; font-weight: 760; }
+      .step { fill: #263d32; font-size: 20px; font-weight: 740; }
+      .detail { fill: #50665a; font-size: 15px; }
+      .mini { fill: #476255; font-size: 13px; font-weight: 650; }
+    </style>
+  </defs>
+
+  <rect width="1240" height="610" rx="18" fill="#f7faf8"/>
+  <path d="M 52 114 H 1188" stroke="#d7e5dc" stroke-width="1.5"/>
+  <rect x="52" y="30" width="150" height="26" rx="13" fill="#dcf2e2"/>
+  <text x="68" y="48" class="eyebrow">AUTOMATION / 01</text>
+  <text x="52" y="95" class="heading">One little hello, on a steady clock.</text>
+  <text x="1188" y="87" text-anchor="end" class="subheading">Windows + Python + Playwright</text>
+
+  <path d="M 322 272 H 339 M 618 272 H 635 M 914 272 H 931" fill="none" stroke="#31463b" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="52" y="155" width="270" height="232" rx="12" fill="#e8f5ea" stroke="#bddfc5" stroke-width="1.5"/>
+  <circle cx="89" cy="199" r="22" fill="#c9ead0"/>
+  <circle cx="89" cy="199" r="12" fill="none" stroke="#2b744e" stroke-width="2.4"/>
+  <path d="M 89 192 V 200 L 95 204" fill="none" stroke="#2b744e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="123" y="204" class="eyebrow">01 / THE CLOCK</text>
+  <text x="76" y="262" class="step">Wake up every 5 hours</text>
+  <text x="76" y="291" class="detail">Task Scheduler starts one run</text>
+  <rect x="76" y="326" width="170" height="34" rx="17" fill="#ffffff"/>
+  <text x="95" y="348" class="mini">no window to keep open</text>
+
+  <rect x="348" y="155" width="270" height="232" rx="12" fill="#e9f3f8" stroke="#bedbe8" stroke-width="1.5"/>
+  <circle cx="385" cy="199" r="22" fill="#cce6f3"/>
+  <rect x="374" y="192" width="22" height="16" rx="3" fill="none" stroke="#296480" stroke-width="2.3"/>
+  <path d="M 375 197 H 395 M 379 189 V 192 M 386 189 V 192" fill="none" stroke="#296480" stroke-width="2" stroke-linecap="round"/>
+  <text x="419" y="204" class="eyebrow">02 / THE KEY</text>
+  <text x="372" y="252" class="step">Open dedicated</text>
+  <text x="372" y="275" class="step">Chrome</text>
+  <text x="372" y="309" class="detail">Reuse the manual login</text>
+  <rect x="372" y="326" width="175" height="34" rx="17" fill="#ffffff"/>
+  <text x="390" y="348" class="mini">separate browser profile</text>
+
+  <rect x="644" y="155" width="270" height="232" rx="12" fill="#f0eff9" stroke="#d3cbea" stroke-width="1.5"/>
+  <circle cx="681" cy="199" r="22" fill="#ded8f1"/>
+  <path d="M 670 192 H 692 V 204 H 681 L 675 209 V 204 H 670 Z" fill="none" stroke="#68549a" stroke-width="2.2" stroke-linejoin="round"/>
+  <text x="715" y="204" class="eyebrow">03 / THE THREAD</text>
+  <text x="668" y="252" class="step">Find the right</text>
+  <text x="668" y="275" class="step">conversation</text>
+  <text x="668" y="309" class="detail">Open URL, find the composer</text>
+  <rect x="668" y="326" width="190" height="34" rx="17" fill="#ffffff"/>
+  <text x="686" y="348" class="mini">multiple selector fallbacks</text>
+
+  <rect x="940" y="155" width="248" height="232" rx="12" fill="#fff0e8" stroke="#f0d1bf" stroke-width="1.5"/>
+  <circle cx="977" cy="199" r="22" fill="#f9d9c7"/>
+  <path d="M 966 203 L 989 192 L 981 215 L 977 206 Z M 977 206 L 989 192" fill="none" stroke="#a45433" stroke-width="2.2" stroke-linejoin="round"/>
+  <text x="1011" y="204" class="eyebrow">04 / THE SEND</text>
+  <text x="964" y="262" class="step">Type, focus, Enter</text>
+  <text x="964" y="291" class="detail">Send the message exactly once</text>
+  <rect x="964" y="326" width="150" height="34" rx="17" fill="#ffffff"/>
+  <text x="981" y="348" class="mini">close and log result</text>
+
+  <path d="M 1050 387 V 445 Q 1050 475 1020 475 H 230 Q 200 475 200 445 V 394" fill="none" stroke="#748d81" stroke-width="2.2" stroke-dasharray="7 7" marker-end="url(#soft-arrow)"/>
+  <rect x="441" y="456" width="359" height="36" rx="18" fill="#f7faf8" stroke="#cbded2"/>
+  <text x="620" y="479" text-anchor="middle" class="mini">And the loop begins again at the next scheduled time</text>
+
+  <path d="M 779 387 V 515" fill="none" stroke="#b38a67" stroke-width="2" stroke-dasharray="5 6"/>
+  <rect x="628" y="515" width="302" height="53" rx="9" fill="#fff9ee" stroke="#ead8b8"/>
+  <circle cx="654" cy="542" r="11" fill="#f6dfb2"/>
+  <text x="654" y="547" text-anchor="middle" fill="#8e5a21" font-size="15" font-family="Arial, sans-serif" font-weight="700">!</text>
+  <text x="675" y="547" fill="#664f32" font-size="14" font-family="'Segoe UI', Arial, sans-serif">Can't find it? Log + screenshot, no send.</text>
+  <text x="52" y="594" fill="#73897b" font-size="12" font-family="'Segoe UI', Arial, sans-serif">The separate profile stays local. No passwords or personal conversation URLs belong in the repository.</text>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "conversation_url": "https://chatgpt.com/c/REPLACE-WITH-YOUR-CONVERSATION-ID",
+  "message": "hello",
+  "interval_hours": 5,
+  "browser_executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+}

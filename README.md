@@ -14,6 +14,7 @@ flowchart LR
 ```
 
 The task needs a signed-in, unlocked Windows desktop and an awake computer with internet access. It opens Chrome for each run and closes it afterward; you do not need to keep a browser or terminal window open. `--test` **really sends** a message. Sending `hello` does **not** guarantee any particular ChatGPT usage-limit reset.
+**Because only sending hello may consume too few input and output tokens**.So what I use is to send a sentence every five hours, "Please help me summarize the latest paper published by arxiv in the last five hours and give a link." In actual testing, the billing for the five-hour quota window can be turned on.
 
 ## 1. Install
 

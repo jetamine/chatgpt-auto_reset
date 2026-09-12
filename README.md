@@ -2,16 +2,7 @@
 
 A small Windows automation tool that sends one configured message to a chosen, existing ChatGPT conversation every 5 hours (or another configured interval). Built with Python 3.12+, Playwright, Google Chrome, and Windows Task Scheduler. Your first login is manual; later runs reuse a **separate, persistent browser profile**. No password is stored by this project.
 
-```mermaid
-flowchart LR
-    A["Windows Task Scheduler<br/>every 5 hours"] --> B["Read config.json"]
-    B --> C["Launch Chrome<br/>persistent profile"]
-    C --> D["Open existing<br/>conversation URL"]
-    D --> E["Find composer<br/>selector fallbacks"]
-    E --> F["Focus, type, Enter<br/>send once"]
-    E -->|not found| G["Log error<br/>save screenshot"]
-    F --> H["Close browser<br/>record outcome"]
-```
+![How the scheduled message flows from Task Scheduler to ChatGPT](assets/workflow.svg)
 
 The task needs a signed-in, unlocked Windows desktop and an awake computer with internet access. It opens Chrome for each run and closes it afterward; you do not need to keep a browser or terminal window open. `--test` **really sends** a message. Sending `hello` does **not** guarantee any particular ChatGPT usage-limit reset.
 **Because only sending hello may consume too few input and output tokens**.So what I use is to send a sentence every five hours, "Please help me summarize the latest paper published by arxiv in the last five hours and give a link." In actual testing, the billing for the five-hour quota window can be turned on.
